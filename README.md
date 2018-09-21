@@ -2,7 +2,7 @@
 
 ## Technical stack:
 
-* TypeScript
+* React, TypeScript
 * Axios ( by default , possibility of substitution with other http client lib )
 * Kendo Data Query ( by default for in-memory data filtering, sorting and aggregation)
 * Jest ( test framework )

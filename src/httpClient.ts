@@ -1,5 +1,11 @@
-import Axios from 'axios';
-import { fetchApiConfig } from '../__mocks__/mockData';
+import Axios, { AxiosRequestConfig } from 'axios';
+
+export const DefaultFetchApiConfig: AxiosRequestConfig = {
+    baseURL: "http://localhost:8080/ee-api/",
+    responseType: 'json',
+    headers: { 'X-Custom-Header': 'foobar' },
+    timeout: 3000,
+}
 
 export interface HttpClient {
     getInstance(): HttpClientInstance;
@@ -35,7 +41,7 @@ EeHttpClient = class EeHttpClient {
 
         if (!this._instance) {
             if (httpClientLib instanceof Axios) {
-                this._instance = httpClientLib.create(fetchApiConfig);
+                this._instance = httpClientLib.create(DefaultFetchApiConfig);
             } else if (httpClientLib instanceof fetch) {
                 this._instance = fetch;
             }

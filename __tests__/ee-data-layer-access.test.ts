@@ -1,5 +1,4 @@
 import 'jest';
-import * as kendoDataQuery from '@progress/kendo-data-query';
 import EeDataAccessAPI, { BaseAPI } from '../src/api'
 import { HttpConfiguration } from '../src/configuration';
 import * as mocks from '../__mocks__/mockData';

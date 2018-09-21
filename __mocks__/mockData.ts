@@ -1,17 +1,7 @@
-import { AxiosRequestConfig } from 'axios'
 import { DataSourceDescriptors, ReportsViewData, Report } from '../src/interfaces';
-import { HttpResponse } from '../src/httpClient';
 
 export const basePath = "http://localhost:8080/ee-api/";
 export const urlEndpoint = "/reports";
-
-export const fetchApiConfig: AxiosRequestConfig = {
-    baseURL: basePath,
-    url: urlEndpoint,
-    responseType: 'json',
-    headers: { 'X-Custom-Header': 'foobar' },
-    timeout: 5000,
-}
 
 export const dataSourceDescriptors: DataSourceDescriptors =
 {
