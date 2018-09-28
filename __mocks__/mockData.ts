@@ -113,15 +113,6 @@ export const testReportViewData: ReportsViewData =
     totals: 1
 }
 
-export const testReport: Report =
-{
-    id: 324225,
-    name: "vendor2",
-    riskPercent: 0.87,
-    vtmId: 55352,
-    isDanger: true
-}
-
 export const httpResponseResolveMock = {
     data: testReportViewData,
     ok: true,
@@ -133,6 +124,6 @@ export const httpResponseRejectMock = {
     data: {},
     ok: false,
     status: 404,
-    statusText: "BAD",
+    statusText: "NOT FOUND",
     url: '/reports123'
 }

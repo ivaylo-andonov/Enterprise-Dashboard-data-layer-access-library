@@ -32,7 +32,7 @@ class HttpClientInstanceMock {
 
     post(url: string, descriptors: DataSourceDescriptors, config?: object) {
         return new Promise((resolve, reject) => {
-            if (descriptors.filter) {
+            if (url && descriptors.filter) {
                 resolve(httpResponseResolveMock)
             } else {
                 reject(httpResponseRejectMock)
